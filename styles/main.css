@@ -25,7 +25,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: url(/assets/images/signup-hero.jpg) no-repeat center center;
+    background: url(../assets/images/signup-hero.jpg) no-repeat center center;
     background-size: cover;
 }
 
