@@ -8,11 +8,10 @@
 :root {
     --color-dingley: #596D48;
     --color-athens-gray: #E5E7EB;
-    --color-woodsmoke: #181b1a;
+    --color-mine-shaft: #2c2c2c;
     --bg-athens-gray: #F9FAFB;
     --width-sidebar: 40%;
     --width-main: 60%;
-    --o-wrapper: 25px 0 25px 55px;
 }
 
 /*** GLOBAL SELECTORS ***/
@@ -36,7 +35,8 @@ label {
     letter-spacing: 1px;
     font-size: 0.9rem;
     font-weight: 500;
-    padding: 0 0 9px 0;
+    padding: 0 0 2px 0;
+    color: var(--color-mine-shaft);
 }
 
 legend {
@@ -53,15 +53,18 @@ a, button {
 
 input {
     width: 240px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid var(--color-athens-gray);
 }
 
 /*** REUSABLE SELECTORS ***/
 .o-wrapper {
-    padding: var(--o-wrapper);
+    padding: 25px 0 25px 55px;
 }
 
 .block {
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
 .center {
@@ -111,15 +114,20 @@ input {
     align-items: center;
     justify-content: flex-start;
     background-color: var(--bg-athens-gray);
-    height: 100vh;
+    min-height: 100vh;
     width: var(--width-main);
+    height: max-content;
 }
 
 .main-inner {
     display: flex;
+    justify-content: flex-start;
     position: relative;
     flex-direction: column;
+    height: max-content;
+    padding: 20px 0;
     width: 100%;
+    overflow: auto;
 }
 
 .main-inner>* {
@@ -128,10 +136,10 @@ input {
 }
 
 .header__message {
-    font-size: 28px;
+    font-size: 1.65rem;
     font-weight: 600;
     width: min(800px, calc(100% - 75px));
-    color: var(--color-woodsmoke);
+    color: var(--color-mine-shaft);
 }
 
 /*** FORM ***/
@@ -151,13 +159,28 @@ input {
     justify-content: flex-start;
     margin: 0 0 20px 0;
     background-color: #fff;
-    gap: 30px 50px 30px 0;
+    gap: 30px 50px;
+    width: min(700px, 100%);
 }
 
 .light-card {
     background-color: #fff;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2);
     width: inherit;
+}
+
+.focus {
+    border: 1px solid blue;
+    box-shadow: 2px 2px 14px 0 rgba(0, 0, 0, 0.2);
+}
+
+.error{
+    border: 1px solid red;
+}
+
+.error-with-warning{
+    display: block;
+    color: red;
 }
 
 .login-link {
@@ -171,7 +194,8 @@ input {
 .account-login {
     display: inline-flex;
 }
-.account-login > * {
+
+.account-login>* {
     width: max-content;
     padding: 0 5px;
     font-size: 1.2rem;
@@ -179,12 +203,49 @@ input {
 
 /*** mobile responsiveness ***/
 
+@media screen and (max-width: 744px) {
+    html {
+        font-size: 14px;
+    }
+    .o-wrapper {
+        padding: 20px 0 20px 15px;
+    }
+    .input-holder,.main-inner, .form-btn-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    legend, .submit{
+        margin: 0 auto;
+    }
+    .header-logo{
+        height: 100px;
+    }
+    .odin-logo-wrapper{
+        font-size: 74px;
+    }
+}
+
 @media screen and (max-width: 420px) {
     body {
         flex-direction: column;
     }
-
+    .o-wrapper {
+        padding: 20px 0 20px 2px;
+    }
+    .header-logo {
+        height: 80px;
+        width: auto;
+    }
     .sidebar {
         width: 100%;
+        height: 200px;
+    }
+    .main{
+        width: 100vw;
+        height: calc(100vh - 300px);
+    }
+    .header__message{
+        margin: 20px 0 0 0;
     }
 }
