@@ -1,0 +1,190 @@
+/*** imported fonts ***/
+@font-face {
+    font-family: "Norse Bold";
+    src: url("../assets/fonts/Norse-Bold.otf") format("opentype");
+}
+
+/*** global custom properties ***/
+:root {
+    --color-dingley: #596D48;
+    --color-athens-gray: #E5E7EB;
+    --color-woodsmoke: #181b1a;
+    --bg-athens-gray: #F9FAFB;
+    --width-sidebar: 40%;
+    --width-main: 60%;
+    --o-wrapper: 25px 0 25px 55px;
+}
+
+/*** GLOBAL SELECTORS ***/
+html {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: url(/assets/images/signup-hero.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+label {
+    text-transform: uppercase;
+    display: block;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0 0 9px 0;
+}
+
+legend {
+    font-size: 1.8rem;
+}
+
+i {
+    font-style: italic;
+}
+
+a, button {
+    cursor: pointer;
+}
+
+input {
+    width: 240px;
+}
+
+/*** REUSABLE SELECTORS ***/
+.o-wrapper {
+    padding: var(--o-wrapper);
+}
+
+.block {
+    padding: 10px 0;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*** sidebar ***/
+.sidebar {
+    height: 100vh;
+    color: #fff;
+    position: relative;
+    width: var(--width-sidebar);
+    display: flex;
+    justify-content: center;
+}
+
+.header-logo {
+    height: 140px;
+    width: auto;
+}
+
+.odin-logo-wrapper {
+    padding: 20px 0;
+    position: absolute;
+    top: 20%;
+    height: min-content;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    font: normal 600 102px "Norse Bold";
+}
+
+.sidebar-photo-credit {
+    position: absolute;
+    bottom: 0;
+    padding: 15px;
+}
+
+.sidebar-photo-credit>a {
+    color: #fff;
+}
+
+/*** MAIN ***/
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--bg-athens-gray);
+    height: 100vh;
+    width: var(--width-main);
+}
+
+.main-inner {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+}
+
+.main-inner>* {
+    position: inherit;
+    margin: 0 0 10px 0;
+}
+
+.header__message {
+    font-size: 28px;
+    font-weight: 600;
+    width: min(800px, calc(100% - 75px));
+    color: var(--color-woodsmoke);
+}
+
+/*** FORM ***/
+.submit {
+    background-color: var(--color-dingley);
+    padding: 15px 50px;
+    color: #fff;
+    border: 0;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.input-holder {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0 0 20px 0;
+    background-color: #fff;
+    gap: 30px 50px 30px 0;
+}
+
+.light-card {
+    background-color: #fff;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2);
+    width: inherit;
+}
+
+.login-link {
+    color: var(--color-dingley);
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+.account-login {
+    display: inline-flex;
+}
+.account-login > * {
+    width: max-content;
+    padding: 0 5px;
+    font-size: 1.2rem;
+}
+
+/*** mobile responsiveness ***/
+
+@media screen and (max-width: 420px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+}

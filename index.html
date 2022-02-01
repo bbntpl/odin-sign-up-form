@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="/assets/images/odin-logo.png">
+    <title>Odin Sign-up Form</title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <header class="odin-logo-wrapper center">
+            <img class="header-logo" src="assets/images/odin-logo.png" />
+            <h1 class="header-text">ODIN</h1>
+        </header>
+        <footer class="sidebar-photo-credit">Photo by <a
+                href="https://unsplash.com/@danielleone?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Daniel
+                Leone</a> on <a
+                href="https://unsplash.com/s/photos/mountain?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        </footer>
+    </div>
+    <main class="main">
+        <div class="main-inner">
+            <div class="header__message o-wrapper">
+                <h3 class="block">This is not a real online service! You know you need something like this in your life to help you
+                    realize your deepest dreams. Sign up <i>now</i> to get started.</h3>
+                <h3 class="block">You <i>know</i> you want to.</h3>
+            </div>
+            <form class="block" action="" method="post">
+                <div class="light-card">
+                    <fieldset class="o-wrapper">
+                        <legend class="block">Let's do this!</legend>
+                        <ul class="input-holder block">
+                            <li><label for="first-name">first name</label><input type="text" name="first-name"
+                                    id="first-name">
+                            </li>
+                            <li><label for="last-name">last name</label><input type="text" name="last-name"
+                                    id="last-name">
+                            </li>
+                            <li><label for="email">email</label><input type="email" name="email" id="email">
+                            </li>
+                            <li><label for="phone-number">phone number</label><input type="tel" name="phone-number"
+                                    id="phone-number"></li>
+                            <li><label for="pwd">password</label><input type="password" name="pwd" id="pwd">
+                            </li>
+                            <li><label for="confirm-pwd">confirm password</label><input type="password"
+                                    name="confirm-pwd" id="confirm-pwd"></li>
+                        </ul>
+                    </fieldset>
+                </div>
+                <div class="o-wrapper form-btn-wrapper">
+                    <button class="submit">Create Account</button>
+                </div>
+            </form>
+            <span class="account-login o-wrapper">
+                <p>Already have account?</p>
+                <a class="login-link">Log in</a>
+            </span>
+        </div>
+    </main>
+</body>
+
+</html>
